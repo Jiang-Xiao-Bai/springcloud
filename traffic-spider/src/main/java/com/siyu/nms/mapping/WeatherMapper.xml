@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.siyu.nms.dao.WeatherMapper">
+    <!--添加气象数据-->
+    <insert id="addData" parameterType="com.siyu.nms.entity.Weather">
+        INSERT INTO
+        `res_device_weather`
+        (week,`notedate`,according,weather_situation,`temperature`,`humidity`,`wind`,`scale`,`rainfall`,`visibility`,`provinces`,`provincial`,air_index,air_quality,highest,lowest,ultraviolet,sunrise,sunset,airpower,prompt,weather_images)
+        VALUES
+        (#{week},#{noteDate},#{according},#{weatherSituation},#{temperature},#{humidity},#{wind},#{scale},#{rainfall},#{visibility},#{provinces},#{provincial},#{airIndex},#{airQuality},#{highest},#{lowest},#{ultraviolet},#{sunrise},#{sunset},#{airPower},#{prompt},#{weatherImages})
+    </insert>
+    <!--根据时间和城市查询当天的数量-->
+    <select id="checkWeather" parameterType="com.siyu.nms.entity.Weather" resultType="java.lang.Integer">
+        SELECT COUNT(1) FROM res_device_weather
+        WHERE 1=1
+        <if test="noteDate != null and noteDate != ''">
+            and #{noteDate} = notedate
+        </if>
+        <if test="provincial != null and provincial != ''">
+            and #{provincial} = provincial
+        </if>
+    </select>
+
+    <!--修改当天的气象数据-->
+    <update id="updWeather" parameterType="com.siyu.nms.entity.Weather">
+        UPDATE res_device_weather
+        SET
+        weather_situation=#{weatherSituation},
+        temperature=#{temperature},
+        humidity=#{humidity},
+        wind=#{wind},
+        `scale`=#{scale},
+        visibility=#{visibility},
+        air_index=#{airIndex},
+        air_quality=#{airQuality},
+        highest=#{highest},
+        lowest=#{lowest},
+        ultraviolet=#{ultraviolet},
+        sunrise=#{sunrise},
+        sunset=#{sunset},
+        airpower=#{airPower},
+        prompt=#{prompt},
+        weather_images=#{weatherImages}
+        WHERE 1=1 and #{noteDate} = notedate and #{provincial} = provincial
+    </update>
+</mapper>
