@@ -10,7 +10,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>ArcSoftFaceDemo-master</module>
+        <module>arcsoft-face</module>
         <module>project01</module>
         <module>eureka-server</module>
         <module>eureka-client</module>
