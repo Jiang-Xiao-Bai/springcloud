@@ -145,6 +145,7 @@
             <version>1.11.3</version>
         </dependency>
 
+        <!--日志依赖-->
         <!-- https://mvnrepository.com/artifact/org.apache.log4j/com.springsource.org.apache.log4j -->
         <dependency>
             <groupId>org.apache.log4j</groupId>
