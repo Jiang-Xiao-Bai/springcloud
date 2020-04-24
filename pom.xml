@@ -11,7 +11,6 @@
 
     <modules>
         <module>arcsoft-face</module>
-        <module>project01</module>
         <module>eureka-server</module>
         <module>eureka-client</module>
         <module>springboot</module>
