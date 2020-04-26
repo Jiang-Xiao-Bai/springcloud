@@ -45,10 +45,10 @@ public class WeChatPushTest {
             openList = recursionOpenId(openList,null,wxMpService);
             for(String id : openList){
                 templateMessage.setToUser(id);//要推送的用户openid
-                wxMpTemplateData.add(new WxMpTemplateData("first", "交通违停提醒"));
-                wxMpTemplateData.add(new WxMpTemplateData("message", "xxx道路违停"));
-                wxMpTemplateData.add(new WxMpTemplateData("numberPlate", "粤S8888"));
-                wxMpTemplateData.add(new WxMpTemplateData("createTime","2020-04-05"));
+                wxMpTemplateData.add(new WxMpTemplateData("first", "交通违停提醒","#FF00FF"));
+                wxMpTemplateData.add(new WxMpTemplateData("message", "xxx道路违停","#FF00FF"));
+                wxMpTemplateData.add(new WxMpTemplateData("numberPlate", "粤S8888","#FF00FF"));
+                wxMpTemplateData.add(new WxMpTemplateData("createTime","2020-04-05","#FF00FF"));
                 templateMessage.setData(wxMpTemplateData);//存放数据
                 wxMpService.getTemplateMsgService().sendTemplateMsg(templateMessage);
             }
