@@ -1,7 +1,6 @@
 package com.ssm.springboot.JavaStudyDemo;
 
 import com.ssm.springboot.DemoTests.Person;
-import org.codehaus.groovy.util.ListHashMap;
 
 import java.util.*;
 
@@ -64,8 +63,6 @@ public class CollectionTest {
     Map<String,Object> map=new HashMap<>();
 
     Map<String,Object> linked=new LinkedHashMap<>();
-
-    Map<String,Object> listHashMap=new ListHashMap<>();
 
     /**
      * 1.不可以有null值和null键
