@@ -1,3 +1,4 @@
+/*
 package com.ssm.springboot.jobhandler;
 
 import com.ssm.springboot.entity.UserEntity;
@@ -25,6 +26,7 @@ import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+*/
 /**
  * 业务逻辑类
  * <p>
@@ -36,7 +38,8 @@ import java.util.concurrent.TimeUnit;
  * 3、执行日志：需要通过 "XxlJobLogger.log" 打印执行日志；
  *
  * @author xuxueli 2019-12-11 21:52:51
- */
+ *//*
+
 @Component
 public class SampleXxlJob extends AreaCodeList {
     private static Logger logger = LoggerFactory.getLogger(SampleXxlJob.class);
@@ -47,11 +50,13 @@ public class SampleXxlJob extends AreaCodeList {
     @Autowired
     AutoIdCardRedom autoIdCardRedom;//随机idCard
 
-    /**
+    */
+/**
      * 生成随机姓名
      *
      * @return
-     */
+     *//*
+
     public static String getName() {
         Random random = new Random();
         String[] Surname = {"赵", "钱", "孙", "李", "周", "吴", "郑", "王", "冯", "陈", "褚", "卫", "蒋", "沈", "韩", "杨", "朱", "秦", "尤", "许",
@@ -86,9 +91,11 @@ public class SampleXxlJob extends AreaCodeList {
         return name;
     }
 
-    /**
+    */
+/**
      * 随机生成手机号
-     */
+     *//*
+
     private static String[] telFirst = "134,135,136,137,138,139,150,151,152,157,158,159,130,131,132,155,156,133,153".split(",");
 
     public static int getNum(int start, int end) {
@@ -104,9 +111,11 @@ public class SampleXxlJob extends AreaCodeList {
     }
 
 
-    /**
+    */
+/**
      * 1、简单任务示例（Bean模式）
-     */
+     *//*
+
     @XxlJob("demoJobHandler")
     public ReturnT<String> demoJobHandler(String param) throws Exception {
         UserEntity entity = new UserEntity();
@@ -141,9 +150,11 @@ public class SampleXxlJob extends AreaCodeList {
     }
 
 
-    /**
+    */
+/**
      * 2、分片广播任务
-     */
+     *//*
+
     @XxlJob("shardingJobHandler")
     public ReturnT<String> shardingJobHandler(String param) throws Exception {
 
@@ -164,9 +175,11 @@ public class SampleXxlJob extends AreaCodeList {
     }
 
 
-    /**
+    */
+/**
      * 3、命令行任务
-     */
+     *//*
+
     @XxlJob("commandJobHandler")
     public ReturnT<String> commandJobHandler(String param) throws Exception {
         String command = param;
@@ -204,9 +217,11 @@ public class SampleXxlJob extends AreaCodeList {
     }
 
 
-    /**
+    */
+/**
      * 4、跨平台Http任务
-     */
+     *//*
+
     @XxlJob("httpJobHandler")
     public ReturnT<String> httpJobHandler(String param) throws Exception {
 
@@ -269,9 +284,11 @@ public class SampleXxlJob extends AreaCodeList {
 
     }
 
-    /**
+    */
+/**
      * 5、生命周期任务示例：任务初始化与销毁时，支持自定义相关逻辑；
-     */
+     *//*
+
     @XxlJob(value = "demoJobHandler2", init = "init", destroy = "destroy")
     public ReturnT<String> demoJobHandler2(String param) throws Exception {
         XxlJobLogger.log("XXL-JOB, Hello World.");
@@ -288,3 +305,4 @@ public class SampleXxlJob extends AreaCodeList {
 
 
 }
+*/
