@@ -9,7 +9,7 @@
     </select>
 
     <insert id="addUser" parameterType="com.ssm.springboot.entity.UserEntity">
-        insert into `user` (id,user_name,user_sex,user_age,id_card,phone,birthday,blood_type) values
+        insert into `t_user` (id,user_name,user_sex,user_age,id_card,phone,birthday,blood_type) values
         (#{id},#{userName},#{userSex},#{userAge},#{idCard},#{phone},#{birthday},#{bloodType});
     </insert>
 
