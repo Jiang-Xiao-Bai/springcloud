@@ -48,10 +48,10 @@ public class JSoupTest {
         try {
             final String areaStrUrl = "http://www.baidu.com/baidu?tn=monline_3_dg&ie=utf-8&wd=" + areaStr +"天气";
             String url = Jsoup.connect(areaStrUrl).timeout(3000).get().select(".t").
-                    get(0).getElementsByTag("a").attr("href");
+                    get(0).getElementsByTag("a").attr("href");//获取a标签中的属性
             log.info("爬取地址："+url);
             Document document = Jsoup.connect(url).timeout(3000).get();
-            Elements areaElements = document.select(".ctop > .crumbs");
+            Elements areaElements = document.select(".ctop > .crumbs");//根据css获取标签属性
             Elements weaherElements = document.getElementById("7d").select(".sky");
             for (Element element : weaherElements) {
                 System.out.println("-------------------------------------");
