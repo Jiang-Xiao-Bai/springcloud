@@ -12,6 +12,8 @@
     <modules>
         <module>arcsoft-face</module>
         <module>eureka-server</module>
+        <module>project-01</module>
+        <module>auth-server</module>
         <module>eureka-client</module>
         <module>springboot</module>
         <module>traffic-spider</module>
