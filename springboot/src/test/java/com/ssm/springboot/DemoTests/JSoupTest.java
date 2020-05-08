@@ -32,6 +32,7 @@ public class JSoupTest {
     public static void getDataByIntent() {
         final String url = "https://www.cnblogs.com/javazhiyin/p/11841374.html";
         try {
+            //超时时间 可设置为 (int)Math.random()*1000 防止屏蔽
             Document document = Jsoup.connect(url).timeout(5000).get();
             Elements elements = document.getElementById("cnblogs_post_body").getElementsByTag("p").after("&nbsp;");
 //            for (Element element : elements) {
